@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IQ Soft Studio - 소프트웨어로 재밌는 걸 만드는 스튜디오"
+    />
+    <title>IQ Soft Studio | 소프트웨어로 재밌는 걸 만드는 스튜디오</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#c9f03d",
+              "background-light": "#f8f8f6",
+              "background-dark": "#0a0a0a",
+              "accent-blue": "#3b82f6",
+              "accent-coral": "#ff6b6b"
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              mono: [
+                "ui-monospace",
+                "SFMono-Regular",
+                "Menlo",
+                "Monaco",
+                "Consolas",
+                "Liberation Mono",
+                "Courier New",
+                "monospace"
+              ]
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      .grain-overlay {
+        background-image: url("https://images.unsplash.com/photo-1614851099175-e5b30eb6f696?auto=format&fit=crop&w=1600&q=60");
+        background-size: 500px 500px;
+        opacity: 0.03;
+        pointer-events: none;
+      }
+
+      .marquee {
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        animation: marquee 20s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .service-hover:hover .service-content {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 1rem;
+      }
+
+      .service-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-background-dark">
+    <div class="fixed inset-0 z-50 grain-overlay"></div>
+
+    <div class="relative z-10">
+      <nav class="sticky top-0 z-40 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-5">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="size-6 text-primary">
+              <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold tracking-tight">IQ SOFT</span>
+          </div>
+
+          <div class="hidden md:flex items-center gap-12 font-medium text-sm tracking-wide">
+            <a href="#work" class="hover:text-primary transition-colors">WORK</a>
+            <a href="#services" class="hover:text-primary transition-colors">SERVICES</a>
+            <a href="#about" class="hover:text-primary transition-colors">ABOUT</a>
+            <a href="#contact" class="px-5 py-2.5 bg-primary text-background-dark rounded-lg font-bold hover:scale-105 transition-transform">
+              Let's Talk
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="relative min-h-[90vh] flex flex-col justify-center px-6 lg:px-20 py-20 overflow-hidden">
+        <div class="max-w-[1440px] mx-auto w-full grid lg:grid-cols-12 gap-12 items-end">
+          <div class="lg:col-span-10">
+            <h1 class="text-6xl md:text-8xl lg:text-[10rem] font-bold leading-[0.9] tracking-tighter mb-12">
+              소프트웨어로<br />
+              <span class="text-primary italic">재밌는 걸</span> <span class="whitespace-nowrap">만드는</span><br />
+              스튜디오
+            </h1>
+
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16">
+              <a href="#work" class="group flex items-center gap-4 bg-primary text-background-dark px-8 py-5 rounded-full font-bold text-lg hover:pr-10 transition-all">
+                SEE OUR WORK
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+              </a>
+
+              <p class="max-w-md text-lg text-slate-400 font-light leading-relaxed">
+                창의적인 소프트웨어 제작을 통해 새로운 가치를 제안하는 아이큐 소프트입니다.
+                우리는 복잡함을 단순함으로, 아이디어를 현실로 바꿉니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-y border-white/10 bg-white/5 py-4 overflow-hidden select-none">
+        <div class="marquee font-mono text-sm tracking-widest text-primary/80">
+          AI PRODUCTS ✦ WEB APPS ✦ AUTOMATION ✦ DATA VISUALIZATION ✦ LLM INTEGRATION ✦ USER EXPERIENCE ✦
+          AI PRODUCTS ✦ WEB APPS ✦ AUTOMATION ✦ DATA VISUALIZATION ✦ LLM INTEGRATION ✦ USER EXPERIENCE ✦
+          AI PRODUCTS ✦ WEB APPS ✦ AUTOMATION ✦ DATA VISUALIZATION ✦ LLM INTEGRATION ✦ USER EXPERIENCE ✦
+        </div>
+      </div>
+
+      <section id="services" class="px-6 lg:px-20 py-32 bg-background-dark">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="flex items-center gap-4 mb-20">
+            <span class="w-12 h-px bg-primary"></span>
+            <h2 class="text-sm font-mono tracking-widest text-primary uppercase">Services</h2>
+          </div>
+
+          <div class="divide-y divide-white/10 border-b border-white/10">
+            <article class="service-hover group py-12 cursor-pointer transition-all">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="flex items-center gap-12">
+                  <span class="text-4xl md:text-6xl font-light text-slate-600 group-hover:text-primary transition-colors">01</span>
+                  <h3 class="text-4xl md:text-7xl font-bold tracking-tight">AI Integration</h3>
+                </div>
+                <div class="flex gap-2">
+                  <span class="px-3 py-1 border border-white/20 rounded-full text-xs font-mono uppercase tracking-tighter">LLM Integration</span>
+                  <span class="px-3 py-1 border border-white/20 rounded-full text-xs font-mono uppercase tracking-tighter">Vector DB</span>
+                </div>
+              </div>
+
+              <div class="service-content max-w-2xl">
+                <p class="text-xl text-slate-400 leading-relaxed mb-6">
+                  실제 비즈니스 로직에 결합되어 성과를 내는 AI를 만듭니다.
+                </p>
+              </div>
+            </article>
+
+            <article class="service-hover group py-12 cursor-pointer transition-all">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="flex items-center gap-12">
+                  <span class="text-4xl md:text-6xl font-light text-slate-600 group-hover:text-primary transition-colors">02</span>
+                  <h3 class="text-4xl md:text-7xl font-bold tracking-tight">Web Application</h3>
+                </div>
+                <div class="flex gap-2">
+                  <span class="px-3 py-1 border border-white/20 rounded-full text-xs font-mono uppercase tracking-tighter">React/Next.js</span>
+                  <span class="px-3 py-1 border border-white/20 rounded-full text-xs font-mono uppercase tracking-tighter">SaaS</span>
+                </div>
+              </div>
+
+              <div class="service-content max-w-2xl">
+                <p class="text-xl text-slate-400 leading-relaxed mb-6">
+                  복잡한 상태 관리와 사용자 경험이 중요한 웹 애플리케이션을 빠르고 안정적으로 빌드합니다.
+                </p>
+              </div>
+            </article>
+
+            <article class="service-hover group py-12 cursor-pointer transition-all">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="flex items-center gap-12">
+                  <span class="text-4xl md:text-6xl font-light text-slate-600 group-hover:text-primary transition-colors">03</span>
+                  <h3 class="text-4xl md:text-7xl font-bold tracking-tight">Automation</h3>
+                </div>
+                <div class="flex gap-2">
+                  <span class="px-3 py-1 border border-white/20 rounded-full text-xs font-mono uppercase tracking-tighter">Workflows</span>
+                  <span class="px-3 py-1 border border-white/20 rounded-full text-xs font-mono uppercase tracking-tighter">ETL</span>
+                </div>
+              </div>
+
+              <div class="service-content max-w-2xl">
+                <p class="text-xl text-slate-400 leading-relaxed mb-6">
+                  반복적인 업무를 자동화하여 핵심 팀이 더 중요한 문제 해결에 집중할 수 있는 시스템을 설계합니다.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="px-6 lg:px-20 py-32">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="flex items-center justify-between mb-20">
+            <div class="flex items-center gap-4">
+              <span class="w-12 h-px bg-primary"></span>
+              <h2 class="text-sm font-mono tracking-widest text-primary uppercase">Selected Work</h2>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <article class="md:col-span-8 group relative overflow-hidden rounded-xl bg-slate-900 border border-white/10 hover:border-primary/50 transition-all cursor-pointer">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  src="https://images.unsplash.com/photo-1551281044-8b6d7f38f4d0?auto=format&fit=crop&w=1400&q=80"
+                  alt="Analytics dashboard"
+                />
+              </div>
+              <div class="p-8 absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-background-dark via-transparent to-transparent">
+                <div class="mb-4">
+                  <span class="text-xs font-mono px-3 py-1 bg-primary text-background-dark rounded-full font-bold">FINTECH + AI</span>
+                </div>
+                <h3 class="text-4xl font-bold mb-2">TaxBot Pro</h3>
+                <p class="text-slate-400">복잡한 세무 처리를 자동화하는 AI 엔진</p>
+              </div>
+            </article>
+
+            <article class="md:col-span-4 group relative overflow-hidden rounded-xl bg-slate-900 border border-white/10 hover:border-accent-blue/50 transition-all cursor-pointer">
+              <div class="aspect-square overflow-hidden">
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                  alt="SaaS workspace UI"
+                />
+              </div>
+              <div class="p-8 absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-background-dark via-transparent to-transparent">
+                <div class="mb-4">
+                  <span class="text-xs font-mono px-3 py-1 bg-accent-blue text-white rounded-full font-bold">SAAS</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-2">FlowDesk</h3>
+                <p class="text-slate-400">팀 협업을 위한 워크스페이스</p>
+              </div>
+            </article>
+
+            <article class="md:col-span-12 group relative overflow-hidden rounded-xl bg-slate-900 border border-white/10 hover:border-accent-coral/50 transition-all cursor-pointer">
+              <div class="aspect-[21/9] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1600&q=80"
+                  alt="Live monitoring dashboard"
+                />
+              </div>
+              <div class="p-8 absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-background-dark via-transparent to-transparent">
+                <div class="mb-4">
+                  <span class="text-xs font-mono px-3 py-1 bg-accent-coral text-white rounded-full font-bold">DATA VIZ</span>
+                </div>
+                <h3 class="text-4xl font-bold mb-2">Pulse Dashboard</h3>
+                <p class="text-slate-400">실시간 데이터 스트리밍 시각화 솔루션</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="px-6 lg:px-20 py-32 bg-white/5">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="grid lg:grid-cols-2 gap-20 items-start">
+            <div>
+              <div class="flex items-center gap-4 mb-10">
+                <span class="w-12 h-px bg-primary"></span>
+                <h2 class="text-sm font-mono tracking-widest text-primary uppercase">Why Us</h2>
+              </div>
+
+              <h3 class="text-5xl md:text-7xl font-bold mb-10 leading-tight">왜 우리가<br />만드나요?</h3>
+              <p class="text-2xl text-slate-300 font-light leading-relaxed mb-12">
+                기술은 도구일 뿐입니다. 우리는 어떤 가치를 전달할지, 사용자가 어떤 재미와 편리함을 느낄지 먼저 고민합니다.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-8 border border-white/10 rounded-xl bg-background-dark">
+                <div class="text-6xl font-bold text-primary mb-2">12+</div>
+                <p class="text-slate-400 font-mono uppercase text-xs tracking-widest">Products Shipped</p>
+              </div>
+
+              <div class="p-8 border border-white/10 rounded-xl bg-background-dark">
+                <div class="text-6xl font-bold text-primary mb-2">1w</div>
+                <p class="text-slate-400 font-mono uppercase text-xs tracking-widest">Avg. MVP Delivery</p>
+              </div>
+
+              <div class="p-8 border border-white/10 rounded-xl bg-background-dark">
+                <div class="text-6xl font-bold text-primary mb-2">98%</div>
+                <p class="text-slate-400 font-mono uppercase text-xs tracking-widest">Client Satisfaction</p>
+              </div>
+
+              <div class="p-8 border border-white/10 rounded-xl bg-background-dark">
+                <div class="text-6xl font-bold text-primary mb-2">24/7</div>
+                <p class="text-slate-400 font-mono uppercase text-xs tracking-widest">System Monitoring</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="px-6 lg:px-20 py-32 bg-background-dark border-t border-white/10">
+        <div class="max-w-[1440px] mx-auto text-center">
+          <h2 class="text-7xl md:text-[12rem] font-bold tracking-tighter mb-12">
+            같이 만들어요<span class="text-primary">.</span>
+          </h2>
+
+          <div class="flex flex-col items-center gap-8">
+            <a
+              href="mailto:hello@iqsoft.kr"
+              class="text-3xl md:text-5xl font-light hover:text-primary transition-colors underline underline-offset-8 decoration-white/20 hover:decoration-primary"
+            >
+              hello@iqsoft.kr
+            </a>
+
+            <a href="mailto:hello@iqsoft.kr" class="mt-12 group inline-flex items-center gap-4 bg-primary text-background-dark px-12 py-6 rounded-full font-black text-xl hover:scale-105 transition-all">
+              프로젝트 문의하기
+              <span class="material-symbols-outlined font-normal">send</span>
+            </a>
+          </div>
+
+          <div class="mt-40 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 font-mono text-xs uppercase tracking-widest">
+            <div class="flex items-center gap-8">
+              <a href="#" class="hover:text-white transition-colors">Instagram</a>
+              <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" class="hover:text-white transition-colors">Behance</a>
+            </div>
+            <div>© 2026 IQ SOFT STUDIO. ALL RIGHTS RESERVED.</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
